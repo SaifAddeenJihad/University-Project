@@ -1,6 +1,7 @@
 import network.*;
 
 import java.net.NetworkInterface;
+import java.util.Arrays;
 import java.util.Enumeration;
 
 public class Main {
@@ -28,10 +29,11 @@ public class Main {
 //        multicastSender.close();
 
 
-//        IConnection tcpServer=ConnectionFactory.getIConnection(IConnectionNames.TCP_SERVER);
-//        tcpServer.initialize(4000,null);
-//        System.out.println(tcpServer.receive());
-//        tcpServer.send("that is true heeyyy client");
+        IConnection tcpServer=ConnectionFactory.getIConnection(IConnectionNames.TCP_SERVER);
+        tcpServer.initialize(4000,null);
+        System.out.println(tcpServer.receiveString());
+        tcpServer.sendString("that is true heeyyy client");
+
 
 
 

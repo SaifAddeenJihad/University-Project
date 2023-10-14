@@ -5,7 +5,7 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 
-public abstract class UDP implements IConnection {
+abstract class UDP implements IConnection {
 
     protected DatagramSocket socket = null;
     protected InetAddress address=null;
@@ -26,7 +26,7 @@ public abstract class UDP implements IConnection {
     }
 
 
-    protected DatagramPacket receivePacket() {
+    public DatagramPacket receivePacket() {
 
         byte[] receiveData = new byte[MAX_BUFFER_SIZE];
         DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
@@ -41,6 +41,21 @@ public abstract class UDP implements IConnection {
     }
 
     public abstract byte[] receive();
+
+    @Override
+    public void sendString(String message) {
+
+        byte[] sendData = message.getBytes();
+        DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length,address , port);
+
+        try {
+            socket.send(sendPacket);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
 
     public void close() {
         socket.close();

@@ -2,15 +2,34 @@ package network;
 
 public class ConnectionFactory {
 
-    public static IConnection getIConnection(String connectionType){
-        return switch (connectionType) {
-            case "TCPClient" -> new TCPClient();
-            case "TCPServer" -> new TCPServer();
-            case "UDPClient" -> new UDPClient();
-            case "UDPServer" -> new UDPServer();
-            case "multicastSender" -> new MulticastSender();
-            case "multicastReceiver" -> new MulticastReceiver();
-            default -> null;
-        };
+    public static IConnection getIConnection(String connectionType) {
+        connectionType = connectionType.toLowerCase();
+
+        IConnection connection;
+
+        switch (connectionType) {
+            case "tcpclient":
+                connection = new TCPClient();
+                break;
+            case "tcpserver":
+                connection = new TCPServer();
+                break;
+            case "udpclient":
+                connection = new UDPClient();
+                break;
+            case "udpserver":
+                connection = new UDPServer();
+                break;
+            case "multicastsender":
+                connection = new MulticastSender();
+                break;
+            case "multicastreceiver":
+                connection = new MulticastReceiver();
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown connection type: " + connectionType);
+        }
+
+        return connection;
     }
 }

@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.*;
 import java.util.Enumeration;
 
-public class MulticastReceiver implements IConnection {
+class MulticastReceiver implements IConnection {
 
     private final int MAX_BUFFER_SIZE = 65507;
     private int port;
@@ -46,6 +46,11 @@ public class MulticastReceiver implements IConnection {
     }
 
     @Override
+    public void sendString(String message) {
+
+    }
+
+    @Override
     public byte[] receive() {
 
         byte[] receiveData = new byte[MAX_BUFFER_SIZE];
@@ -59,6 +64,11 @@ public class MulticastReceiver implements IConnection {
 
         return receivePacket.getData();
 
+    }
+
+    @Override
+    public String receiveString() {
+        return null;
     }
 
 

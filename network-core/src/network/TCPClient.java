@@ -1,9 +1,6 @@
 package network;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.Socket;
 
 public class TCPClient extends TCP {
@@ -12,7 +9,7 @@ public class TCPClient extends TCP {
 
         try {
             this.socket = new Socket(ipAddress, port);
-            this.input = socket.getInputStream();
+            this.input = new DataInputStream(socket.getInputStream());
             this.output = new DataOutputStream(socket.getOutputStream());
 
         } catch (IOException e) {

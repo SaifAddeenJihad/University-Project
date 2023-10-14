@@ -1,13 +1,15 @@
 package network;
 
 import java.io.IOException;
-import java.net.*;
+import java.net.DatagramPacket;
+import java.net.InetAddress;
+import java.net.MulticastSocket;
 
-public class MulticastSender implements IConnection{
+class MulticastSender implements IConnection {
 
     private int port;
-    private InetAddress group=null;
-    private MulticastSocket multicastSocket=null;
+    private InetAddress group = null;
+    private MulticastSocket multicastSocket = null;
 
 
     public void initialize(int port, String ipAddress) {
@@ -15,7 +17,7 @@ public class MulticastSender implements IConnection{
         try {
             group = InetAddress.getByName(ipAddress);
             this.multicastSocket = new MulticastSocket();
-            this.port=port;
+            this.port = port;
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -36,7 +38,17 @@ public class MulticastSender implements IConnection{
     }
 
     @Override
+    public void sendString(String message) {
+
+    }
+
+    @Override
     public byte[] receive() {
+        return null;
+    }
+
+    @Override
+    public String receiveString() {
         return null;
     }
 

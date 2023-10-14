@@ -13,6 +13,13 @@ public class UDPClient extends UDP{
         return receivePacket.getData();
     }
 
+    @Override
+    public String receiveString() {
+        DatagramPacket receivePacket=super.receivePacket();
+
+        return new String(receivePacket.getData());
+    }
+
     public void initialize(int port, String ipAddress) {
 
         try {

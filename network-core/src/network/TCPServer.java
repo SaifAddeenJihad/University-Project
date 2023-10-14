@@ -1,16 +1,12 @@
 package network;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class TCPServer extends TCP {
 
     private ServerSocket serverSocket = null;
-
 
 
 
@@ -21,10 +17,11 @@ public class TCPServer extends TCP {
 
             this.socket =serverSocket.accept();
 
-            this.input = socket.getInputStream();
+            this.input = new DataInputStream(socket.getInputStream());
             this.output = new DataOutputStream(socket.getOutputStream());
 
         } catch (IOException e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
     }

@@ -1,15 +1,12 @@
 package network;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.Socket;
 
-public abstract class TCP implements IConnection {
+abstract class TCP implements IConnection {
 
     protected Socket socket=null;
-    protected InputStream input = null;
+    protected DataInputStream input = null;
     protected DataOutputStream output=null;
 
     public void send(byte[] data) {
@@ -22,13 +19,48 @@ public abstract class TCP implements IConnection {
     }
 
     public byte[] receive(){
-        byte[] serverResponse = null;
+        int bufferSize = 1024;  // You can adjust the buffer size as needed
+
+        byte[] serverResponse = new byte[bufferSize];
         try {
-            serverResponse = input.readAllBytes();
+            int bytesRead = input.read(serverResponse);  // Read bytes into the serverResponse byte array
+            if (bytesRead == -1) {
+                // Handle end of stream or other appropriate action
+                throw new IOException("End of stream reached");
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
         return serverResponse;
+    }
+
+    @Override
+    public void sendString(String message) {
+
+        try {
+            output.writeUTF(message);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    @Override
+    public String receiveString() {
+        String serverResponse;
+        try {
+            serverResponse = input.readUTF();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        return serverResponse;
+    }
+    public DataInputStream getInputStream(){
+        return  input;
+    }
+    public DataOutputStream getOutputStream(){
+        return  output;
     }
 }

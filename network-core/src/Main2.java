@@ -1,5 +1,7 @@
 import network.*;
 
+import java.util.Arrays;
+
 public class Main2 {
 
     public static void main(String[] args) {
@@ -17,10 +19,10 @@ public class Main2 {
 //        multicastReceiver.receive();
 //        multicastReceiver.close();
 
-//        IConnection tcpClient= ConnectionFactory.getIConnection(IConnectionNames.TCP_CLIENT);
-//        tcpClient.initialize(4000,"localhost");
-//        tcpClient.send("heyyyyserver");
-//        System.out.println(tcpClient.receive());
+        IConnection tcpClient= ConnectionFactory.getIConnection(IConnectionNames.TCP_CLIENT);
+        tcpClient.initialize(4000,"localhost");
+        tcpClient.sendString("heyyyyserver");
+        System.out.println(tcpClient.receiveString());
 
     }
 }

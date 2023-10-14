@@ -18,6 +18,15 @@ public class UDPServer extends UDP{
         return receivePacket.getData();
     }
 
+    public String receiveString() {
+        DatagramPacket receivePacket=super.receivePacket();
+
+        this.address = receivePacket.getAddress();
+        this.port = receivePacket.getPort();
+
+        return new String(receivePacket.getData());
+    }
+
     @Override
     public void initialize(int port, String ipAddress) {
         try {
