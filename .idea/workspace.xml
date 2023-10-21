@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="539a5378-ba34-450f-a965-c824cb51a751" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/File Transfer/File Transfer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/File Transfer/File Transfer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniServices/miniServices.iml" beforeDir="false" afterPath="$PROJECT_DIR$/miniServices/miniServices.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/network-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/network-core/network-core.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/network-core/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/network-core/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/network-core/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/network-core/.idea/uiDesigner.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +29,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -36,7 +42,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697877373755</updated>
-      <workItem from="1697877375744" duration="2024000" />
+      <workItem from="1697877375744" duration="2404000" />
+      <workItem from="1697880396595" duration="143000" />
+      <workItem from="1697880651536" duration="23000" />
+      <workItem from="1697880695694" duration="5000" />
+      <workItem from="1697880717777" duration="271000" />
     </task>
     <servers />
   </component>
