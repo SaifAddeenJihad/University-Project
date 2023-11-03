@@ -1,17 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="539a5378-ba34-450f-a965-c824cb51a751" name="Changes" comment="">
+    <list default="true" id="51316b06-57bd-4e08-aeed-72915b8d66c4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/client/CommandReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/server/CommandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/testClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/network-core/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/network-core/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/network-core/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/network-core/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/network-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Administrator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/Main2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/ConnectionFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/IConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/IConnectionNames.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/MulticastReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/MulticastSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/TCP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/TCPClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/TCPServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/UDP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/UDPClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/UDPServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/src/Main2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/src/network/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/ConnectionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/src/network/IConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/IConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/src/network/IConnectionNames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/IConnectionNames.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/src/network/MulticastReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/MulticastReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/src/network/MulticastSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/MulticastSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/src/network/TCP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/TCP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/src/network/TCPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/TCPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/src/network/TCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/TCPServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/src/network/UDP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/UDP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/src/network/UDPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/UDPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-core/src/network/UDPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/UDPServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -19,38 +62,179 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2X49ENsq3TQCmxrp3rJC6ZxmghM" />
+  <component name="ProjectId" id="2X4N2qZU5oopmpaQiJOUHMujvFk" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/company/network-core" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/company/network-core" />
+      <recent name="$PROJECT_DIR$/network" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/company" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.test">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="Lab_Administrator" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.test" />
+      <module name="Lab_Administrator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.testClient" />
+      <module name="Lab_Administrator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.testClient" />
+      <item itemvalue="Application.test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.test" />
+        <item itemvalue="Application.testClient" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="539a5378-ba34-450f-a965-c824cb51a751" name="Changes" comment="" />
-      <created>1697877373755</created>
+      <changelist id="51316b06-57bd-4e08-aeed-72915b8d66c4" name="Changes" comment="" />
+      <created>1697884191089</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1697877373755</updated>
-      <workItem from="1697877375744" duration="2404000" />
-      <workItem from="1697880396595" duration="143000" />
-      <workItem from="1697880651536" duration="23000" />
-      <workItem from="1697880695694" duration="5000" />
-      <workItem from="1697880717777" duration="271000" />
+      <updated>1697884191089</updated>
+      <workItem from="1697884193029" duration="5388000" />
+      <workItem from="1697889595959" duration="864000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/test.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/server/CommandService.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/testClient.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
