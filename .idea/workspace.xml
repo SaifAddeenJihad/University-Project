@@ -1,49 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51316b06-57bd-4e08-aeed-72915b8d66c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/client/CommandReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/server/CommandService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/testClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/network-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_Administrator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/Main2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/ConnectionFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/IConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/IConnectionNames.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/MulticastReceiver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/MulticastSender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/TCP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/TCPClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/TCPServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/UDP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/UDPClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/out/production/networkDemo/network/UDPServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/src/Main2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/src/network/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/ConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/src/network/IConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/IConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/src/network/IConnectionNames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/IConnectionNames.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/src/network/MulticastReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/MulticastReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/src/network/MulticastSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/MulticastSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/src/network/TCP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/TCP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/src/network/TCPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/TCPClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/src/network/TCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/TCPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/src/network/UDP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/UDP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/src/network/UDPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/UDPClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network-core/src/network/UDPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/network/UDPServer.java" afterDir="false" />
-    </list>
+    <list default="true" id="51316b06-57bd-4e08-aeed-72915b8d66c4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,14 +80,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/company/network-core" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "G:/Project univ/Groubing the project",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/com/company/network-core" />
@@ -199,6 +156,7 @@
       <updated>1697884191089</updated>
       <workItem from="1697884193029" duration="5388000" />
       <workItem from="1697889595959" duration="864000" />
+      <workItem from="1699085740856" duration="307000" />
     </task>
     <servers />
   </component>
