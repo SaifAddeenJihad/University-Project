@@ -1,5 +1,6 @@
 package Stream;
 
+import Services.Handler;
 import network.ConnectionFactory;
 import network.IConnectionNames;
 import network.MulticastSender;
@@ -23,9 +24,9 @@ public class Sender implements Runnable {
             //InetAddress multicastGroup = InetAddress.getByName("239.0.0.1"); // Multicast IP address
             System.out.println("im heere");
             while(true){
-                if(Main.baos.isEmpty())
+                if(Handler.baos.isEmpty())
                     continue;
-                byte[] compressed= Main.baos.remove();
+                byte[] compressed= Handler.baos.remove();
                 int chunkSize = 65507;
                 int totalChunks = (int) Math.ceil((double) compressed.length / chunkSize);
 

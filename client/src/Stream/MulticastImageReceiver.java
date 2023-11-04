@@ -15,7 +15,10 @@ import java.io.InputStream;
 public class MulticastImageReceiver {
     private static JFrame frame;
     private static JLabel imageLabel;
-
+    private static boolean streamIsRunning=false;
+    public static void setStreamIsRunning(boolean isRunning){
+        streamIsRunning=isRunning;
+    }
     public static void start() {
 
         MulticastReceiver connection = (MulticastReceiver) ConnectionFactory.getIConnection(IConnectionNames.MULTICAST_RECEIVER);
@@ -23,9 +26,10 @@ public class MulticastImageReceiver {
 
         initializeFrame();
 
-        while (true) {
+        while (streamIsRunning) {
             displayImage(connection);
         }
+        frame.dispose();
     }
 
     private static void initializeFrame() {

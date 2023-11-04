@@ -1,5 +1,6 @@
 package Stream;
 
+import Services.Handler;
 import org.xerial.snappy.Snappy;
 
 import javax.imageio.ImageIO;
@@ -42,11 +43,11 @@ Capture implements Runnable{
                 byte[] fullBuffer = baos.toByteArray();
                 byte[] compressed= new byte[0];
                 compressed = Snappy.compress(fullBuffer);
-                Main.baos.add(compressed);
+                Handler.baos.add(compressed);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println(Main.baos.size());
+            System.out.println(Handler.baos.size());
         }
     }
 }

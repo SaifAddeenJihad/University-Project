@@ -23,10 +23,13 @@ public class CommandReceiver {
             }
         }
     }
-    private void execute(String command){
+    private void execute(String command) throws Exception {
         switch (command){
             case "Stream":
-                System.out.println("Streaming started.");
+                Handler.startStream();
+                break;
+            case "Close Stream":
+                Handler.CloseStream();
                 break;
             case "Control":
                 break;
@@ -44,6 +47,7 @@ public class CommandReceiver {
                 break;
             case "Block Internet":
                 break;
+
         }
     }
 }

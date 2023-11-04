@@ -58,7 +58,7 @@ public class Lan implements Serializable {
         if (client != null && client.getId() != 0) {
             for (Map.Entry<Integer, Client> entry : clients.entrySet()) {
                 Integer clientId = entry.getKey();
-                if (client.getId() == clientId) {
+                if (client.getId() == clientId && client.getRoomId()==roomId) {
 
                     return;
                 }
