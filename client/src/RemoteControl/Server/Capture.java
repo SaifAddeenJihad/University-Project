@@ -1,5 +1,6 @@
 package RemoteControl.Server;
 
+import Services.Handler;
 import org.xerial.snappy.Snappy;
 
 import javax.imageio.ImageIO;
@@ -9,7 +10,10 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 public class Capture implements Runnable{
-
+    private static boolean isRunning=false;
+    public static void isRunning(boolean flag){
+        isRunning=flag;
+    }
     @Override
     public void run() {
         Robot robot = null;
@@ -18,9 +22,10 @@ public class Capture implements Runnable{
         } catch (AWTException e) {
             throw new RuntimeException(e);
         }
+        isRunning=true;
         Rectangle capture = new Rectangle(1920, 1080);
-        while (true) {
-
+        while (isRunning) {
+            System.out.println("capture is running");
             BufferedImage image = robot.createScreenCapture(capture);
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             try {
@@ -28,7 +33,7 @@ public class Capture implements Runnable{
                 byte[] fullBuffer = baos.toByteArray();
                 byte[] compressed= new byte[0];
                 compressed = Snappy.compress(fullBuffer);
-                Main.baos.add(compressed);
+                Handler.baos.add(compressed);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

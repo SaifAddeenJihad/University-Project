@@ -2,8 +2,9 @@ package MiniServices;
 
 public class MiniServices {
     private MiniServices(){}
-    public static void openApp(String browser ,String URL) throws Exception {
-        CommandRunner.executeCommand("start "+browser+" \""+URL+"\"");
+    public static void openApp(String command) throws Exception {
+        CommandRunner.executeCommand(command);
+        //String s="start "+browser+" \""+URL+"\"";
     }
     public static void shutDown() throws Exception {
         CommandRunner.executeCommand("shutdown -s -t 0");

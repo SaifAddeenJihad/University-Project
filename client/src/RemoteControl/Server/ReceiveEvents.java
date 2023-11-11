@@ -7,10 +7,13 @@ import java.net.Socket;
 import java.util.Scanner;
 /* Used to recieve server commands then execute them at the client side*/
 
-class ReceiveEvents extends Thread{
+public class ReceiveEvents extends Thread{
     DataInputStream dataInputStream;
     Robot robot = null;
-    boolean continueLoop = true;
+    private static boolean isRunning=false;
+    public static void isRunning(boolean flag){
+        isRunning=flag;
+    }
 
     public ReceiveEvents(DataInputStream dataInputStream, Robot robot){
 
@@ -22,9 +25,10 @@ class ReceiveEvents extends Thread{
 
 
     public void run(){
+        isRunning=true;
         Scanner scanner = null;
         scanner = new Scanner(dataInputStream);
-        while(continueLoop){
+        while(isRunning){
             //recieve commands and respond accordingly
 
             //while(!scanner.hasNext()) { }

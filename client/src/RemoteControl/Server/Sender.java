@@ -1,21 +1,27 @@
 package RemoteControl.Server;
 
+import Services.Handler;
+import auxiliaryClasses.IPorts;
 import network.ConnectionFactory;
 import network.IConnectionNames;
 import network.UDPClient;
 
 public class Sender implements Runnable {
     private final int chunkSize= 65507;
-
+    private static boolean isRunning=false;
+    public static void isRunning(boolean flag){
+        isRunning=flag;
+    }
     @Override
     public void run() {
         try{
 
             UDPClient udpClient= (UDPClient) ConnectionFactory.getIConnection(IConnectionNames.UDP_CLIENT);
-            udpClient.initialize(50002,"192.168.1.82");//server ip from config file
+            udpClient.initialize(IPorts.CONTROL,"192.168.1.2");//server ip from config file
 
-            while(true){
-                if(Main.baos.isEmpty())
+            isRunning=true;
+            while(isRunning){
+                if(Handler.baos.isEmpty())
                     continue;
                 sendImage(udpClient);
             }
@@ -28,7 +34,7 @@ public class Sender implements Runnable {
     }
     private void sendImage(UDPClient udpClient){
 
-        byte[] compressed= Main.baos.remove();
+        byte[] compressed= Handler.baos.remove();
         int totalChunks = (int) Math.ceil((double) compressed.length / chunkSize);
 
         for (int chunkIndex = 0; chunkIndex < totalChunks; chunkIndex++) {

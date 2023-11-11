@@ -1,5 +1,6 @@
 package FileTransfer;
 
+import auxiliaryClasses.IPorts;
 import network.ConnectionFactory;
 import network.IConnectionNames;
 import network.TCPServer;
@@ -14,18 +15,20 @@ public class FileSender{
     private String senderFilePath;
 
     private DataOutputStream outputStream;
+    private DataInputStream inputStream;
+    public FileSender( ) {
 
-    public FileSender( String senderFilePath) {
-
-        this.senderFilePath = senderFilePath;
     }
 
 
     public void start() {
         TCPServer connection= (TCPServer) ConnectionFactory.getIConnection(IConnectionNames.TCP_SERVER);
-        connection.initialize(7777,null);
+        connection.initialize(IPorts.FILE_TRANSFER,null);
         outputStream = connection.getOutputStream();
+        inputStream =connection.getInputStream();
         try {
+            senderFilePath=inputStream.readUTF();
+
             outputStream.writeUTF("clientIdFromConfig");
             outputStream.flush();
         } catch (IOException e) {
@@ -46,8 +49,11 @@ public class FileSender{
             }
         }catch (Exception e){
             e.printStackTrace();
-        }
 
+        }
+        finally {
+            connection.close();
+        }
     }
 
     private void sendFile(File file) throws IOException {

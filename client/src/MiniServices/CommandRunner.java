@@ -7,7 +7,7 @@ public class CommandRunner {
 
 //38:F3:AB:91:3E:2D
     public static boolean executeCommand(String command) throws Exception {
-        System.out.println(command);
+
         boolean isWindows = System.getProperty("os.name")
                 .toLowerCase().startsWith("windows");
         ProcessBuilder builder = new ProcessBuilder();

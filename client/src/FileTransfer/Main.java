@@ -18,8 +18,8 @@ public class Main {
         //sender
         String savePath = "D:\\shared";
         String sendPath = "C:\\Users\\Saif\\Downloads\\network-core\\network-core.7z";
-        FileSender fileSender = new FileSender(savePath);
-        fileSender.start();
+       // FileSender fileSender = new FileSender(savePath);
+       // fileSender.start();
         //receiver
         //InetAddress ip = InetAddress.getByName("127.0.0.1");
         //FileReceiver fileReceiver=new FileReceiver(ip);

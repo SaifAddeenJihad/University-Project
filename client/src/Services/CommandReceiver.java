@@ -1,5 +1,7 @@
 package Services;
 
+import MiniServices.MiniServices;
+import MiniServices.Screen;
 import auxiliaryClasses.IPorts;
 import network.ConnectionFactory;
 import network.IConnection;
@@ -15,16 +17,18 @@ public class CommandReceiver {
     }
 
     public void start() {
+        //connection.initialize(port, null);
         while(true){
             try{
-
                 connection.initialize(port, null);
-                System.out.println("listning");
                 String command = connection.receiveString();
                 System.out.println(command);
                 execute(command);
             } catch (Exception e) {
 
+            }
+            finally {
+                connection.close();
             }
         }
     }
@@ -37,21 +41,34 @@ public class CommandReceiver {
                 Handler.CloseStream();
                 break;
             case "Control":
+                Handler.startControl();
+                break;
+            case "Stop Control":
+                Handler.stopControl();
                 break;
             case "File Transfer":
+                Handler.receiveFile();
                 break;
             case "File Collect":
+                Handler.sendFile();
                 break;
             case "Shutdown":
+                MiniServices.shutDown();
                 break;
             case "Freeze":
+                Screen.turnOnScreen();
+                MiniServices.disableKeyboard();
+                MiniServices.disableMouse();
                 break;
             case "Unfreeze":
-                break;
-            case "Open App":
+                Screen.turnOffScreen();
+                MiniServices.enableKeyboard();
+                MiniServices.enableMouse();
                 break;
             case "Block Internet":
                 break;
+            default:
+                MiniServices.openApp(command);
 
         }
     }

@@ -1,3 +1,4 @@
+import MiniServices.Screen;
 import Services.Handler;
 import network.*;
 
@@ -19,7 +20,9 @@ public class Main2 {
 //        multicastReceiver.initialize(4000,"239.0.0.1");
 //        multicastReceiver.receive();
 //        multicastReceiver.close();
-        Handler.startStream();
+        Screen.turnOnScreen();
+        Thread.sleep(10000);
+        Screen.turnOffScreen();
 
     }
 }

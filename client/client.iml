@@ -10,7 +10,6 @@
     <orderEntry type="library" name="snappy-java-1.1.10.3" level="project" />
     <orderEntry type="library" name="snappy-java-1.1.10.31" level="project" />
     <orderEntry type="library" name="snappy-java-1.1.10.32" level="project" />
-    <orderEntry type="module" module-name="Server" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>

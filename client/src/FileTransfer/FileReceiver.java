@@ -9,6 +9,7 @@ import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+import auxiliaryClasses.IPorts;
 import network.ConnectionFactory;
 import network.IConnectionNames;
 import network.TCPClient;
@@ -22,7 +23,8 @@ public class FileReceiver {
 
     public void start() throws IOException, ClassNotFoundException, URISyntaxException {
         TCPClient connection= (TCPClient) ConnectionFactory.getIConnection(IConnectionNames.TCP_CLIENT);
-
+        connection.initialize(IPorts.FILE_TRANSFER,"192.168.1.2");
+        System.out.println("sd");
         //Socket socket = new Socket(serverIp, 7777);
         inputStream = connection.getInputStream();
         clientSavePath = inputStream.readUTF();
@@ -32,6 +34,7 @@ public class FileReceiver {
         } else {
             receiveFile();
         }
+        connection.close();
     }
 
     private void receiveFile() throws IOException {
