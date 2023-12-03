@@ -13,10 +13,13 @@ import network.IConnectionNames;
 import network.TCPServer;
 
 import java.awt.*;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.*;
 import java.util.LinkedList;
+import java.util.Properties;
 import java.util.Queue;
+import java.util.ResourceBundle;
 
 public class Handler {
     public static volatile Queue<byte[]> baos =new LinkedList<>();
@@ -70,11 +73,16 @@ public class Handler {
         Sender.isRunning(false);
         ReceiveEvents.isRunning(false);
     }
-    public static void receiveFile() throws IOException, URISyntaxException, ClassNotFoundException {
-        InetAddress inetAddress=InetAddress.getByName("192.168.1.2");//from config
-        FileReceiver fileReceiver =new FileReceiver(inetAddress);
+    public static void receiveFile() {
+        Properties appProps = new Properties();
+        String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
+        try {
+            appProps.load(new FileInputStream(rootPath + "Config.properties"));
+        } catch (IOException e) {
+            throw new RuntimeException("Config.properties file is missing!");
+        }
+        Thread fileReceiver = new Thread(new FileReceiver(appProps.getProperty("server-ip")));
         fileReceiver.start();
-
     }
     public static void sendFile() throws UnknownHostException {
         InetAddress inetAddress=InetAddress.getByName("192.168.1.2");//from config

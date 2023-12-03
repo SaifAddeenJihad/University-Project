@@ -5,121 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caa04166-8936-41ec-9110-116298642af2" name="Changes" comment="hf handler">
-      <change afterPath="$PROJECT_DIR$/client/src/MiniServices/Screen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/wait.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/network-core.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/networkDemo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/FileTransfer/FileReceiver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/FileTransfer/FileSender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/FileTransfer/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/Main2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/RemoteControl/Client/SendEvents$Commands.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/RemoteControl/Client/SendEvents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/RemoteControl/Client/UDPImageReceiver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/RemoteControl/Server/Capture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/RemoteControl/Server/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/RemoteControl/Server/ReceiveEvents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/RemoteControl/Server/Sender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/Stream/Capture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/Stream/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/Stream/MulticastImageReceiver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/Stream/Sender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/network/ConnectionFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/network/IConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/network/IConnectionNames.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/network/MulticastReceiver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/network/MulticastSender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/network/TCP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/network/TCPClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/network/TCPServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/network/UDP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/network/UDPClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/networkDemo/network/UDPServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/snappy-java-1.1.10.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/FileTransfer/FileReceiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/FileTransfer/FileSender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/FileTransfer/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Main2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/RemoteControl/Controller/SendEvents.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/RemoteControl/Controller/UDPImageReceiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Services/CommandService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Services/Commands.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Services/Handler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Stream/Capture.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Stream/Sender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/auxiliaryClasses/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/auxiliaryClasses/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/auxiliaryClasses/IPorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/auxiliaryClasses/IPorts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/auxiliaryClasses/Lan.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/auxiliaryClasses/Lan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/auxiliaryClasses/LanCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/auxiliaryClasses/LanCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/network/ConnectionFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/network/IConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/network/IConnectionNames.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/network/MulticastReceiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/network/MulticastSender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/network/TCP.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/network/TCPClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/network/TCPServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/network/UDP.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/network/UDPClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/network/UDPServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/FileTransfer/FileReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/FileTransfer/FileReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/FileTransfer/FileSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/FileTransfer/FileSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/FileTransfer/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/FileTransfer/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Main2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/MiniServices/CommandRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/MiniServices/CommandRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/MiniServices/MiniServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/MiniServices/MiniServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/RemoteControl/Server/Capture.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/RemoteControl/Server/Capture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/RemoteControl/Server/ReceiveEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/RemoteControl/Server/ReceiveEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/RemoteControl/Server/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/RemoteControl/Server/Sender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Services/CommandReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Services/CommandReceiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Services/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Services/Handler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/FileTransfer/FileReceiver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/FileTransfer/FileSender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/FileTransfer/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Main2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/RemoteControl/Controller/SendEvents$Commands.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/RemoteControl/Controller/SendEvents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/RemoteControl/Controller/UDPImageReceiver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Services/CommandService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Services/Commands.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Services/Handler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Stream/Capture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Stream/Sender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/auxiliaryClasses/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/auxiliaryClasses/IPorts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/auxiliaryClasses/Lan.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/auxiliaryClasses/LanCreator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/network/ConnectionFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/network/IConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/network/IConnectionNames.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/network/MulticastReceiver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/network/MulticastSender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/network/TCP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/network/TCPClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/network/TCPServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/network/UDP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/network/UDPClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/network/UDPServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/network/TCP.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/network/TCP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/network/TCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/network/TCPServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/client/FileTransfer/FileReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/FileTransfer/FileReceiver.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/client/FileTransfer/FileSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/FileTransfer/FileSender.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/client/FileTransfer/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/FileTransfer/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/client/Main2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/Main2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/MiniServices/CommandRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/MiniServices/CommandRunner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/client/MiniServices/MiniServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/MiniServices/MiniServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/MiniServices/ProcessOutputReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/MiniServices/ProcessOutputReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/MiniServices/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/MiniServices/Screen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/client/RemoteControl/Server/Capture.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/RemoteControl/Server/Capture.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/RemoteControl/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/RemoteControl/Server/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/client/RemoteControl/Server/ReceiveEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/RemoteControl/Server/ReceiveEvents.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/client/RemoteControl/Server/Sender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/RemoteControl/Server/Sender.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/client/Services/CommandReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/Services/CommandReceiver.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/client/Services/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/Services/Handler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/Stream/MulticastImageReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/Stream/MulticastImageReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/auxiliaryClasses/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/auxiliaryClasses/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/auxiliaryClasses/IPorts.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/auxiliaryClasses/IPorts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/auxiliaryClasses/Lan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/auxiliaryClasses/Lan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/auxiliaryClasses/LanCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/auxiliaryClasses/LanCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/network/ConnectionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/ConnectionFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/network/IConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/IConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/network/IConnectionNames.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/IConnectionNames.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/network/MulticastReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/MulticastReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/network/MulticastSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/MulticastSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/network/TCP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/TCP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/network/TCPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/TCPClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/network/TCPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/TCPServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/network/UDP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/UDP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/network/UDPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/UDPClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/network/UDPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/UDPServer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +62,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2Xi1RJuLEqU2MP8fQxogTJ2asVM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -146,15 +72,17 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Saif/Desktop/University-Project/client&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/babualrub/Desktop/server&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.12698412&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -205,6 +133,10 @@
       <workItem from="1699690198963" duration="9635000" />
       <workItem from="1699700906881" duration="2444000" />
       <workItem from="1699703992373" duration="2333000" />
+      <workItem from="1700963095702" duration="628000" />
+      <workItem from="1700965009114" duration="1445000" />
+      <workItem from="1701115843678" duration="4240000" />
+      <workItem from="1701121048838" duration="12694000" />
     </task>
     <servers />
   </component>
@@ -234,10 +166,14 @@
           <line>119</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/FileTransfer/FileReceiver.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="6" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/client/src/Services/Handler.java</url>
+          <line>75</line>
+          <properties class="Services.Handler" method="receiveFile">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

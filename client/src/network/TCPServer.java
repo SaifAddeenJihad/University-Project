@@ -7,6 +7,7 @@ import java.net.Socket;
 public class TCPServer extends TCP {
 
     private ServerSocket serverSocket = null;
+    private String connectedIP = "No connection yet";
 
 
 
@@ -15,7 +16,8 @@ public class TCPServer extends TCP {
         try {
             serverSocket = new ServerSocket(port);
             System.out.println("listning");
-            this.socket =serverSocket.accept();
+            this.socket = serverSocket.accept();
+            this.connectedIP = this.socket.getInetAddress().getHostAddress();
 
             this.input = new DataInputStream(socket.getInputStream());
             this.output = new DataOutputStream(socket.getOutputStream());
@@ -33,4 +35,5 @@ public class TCPServer extends TCP {
             throw new RuntimeException(e);
         }
     }
+    public String getConnectedIP() { return this.connectedIP; }
 }
