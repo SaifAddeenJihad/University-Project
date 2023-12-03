@@ -3,84 +3,60 @@ package FileTransfer;
 import auxiliaryClasses.IPorts;
 import network.ConnectionFactory;
 import network.IConnectionNames;
-import network.TCPServer;
+import network.TCPClient;
 
 import java.io.*;
-import java.net.ServerSocket;
-import java.net.Socket;
 
 
-public class FileSender{
-
+public class FileSender implements Runnable{
+    private final String serverIp;
     private String senderFilePath;
-
-    private DataOutputStream outputStream;
-    private DataInputStream inputStream;
-    public FileSender( ) {
-
+    private TCPClient connection;
+    public FileSender(String serverIp) {
+        this.serverIp = serverIp;
     }
 
+    @Override
+    public void run() {
+        connection= (TCPClient) ConnectionFactory.getIConnection(IConnectionNames.TCP_CLIENT);
+        connection.initialize(IPorts.FILE_TRANSFER,serverIp);
 
-    public void start() {
-        TCPServer connection= (TCPServer) ConnectionFactory.getIConnection(IConnectionNames.TCP_SERVER);
-        connection.initialize(IPorts.FILE_TRANSFER,null);
-        outputStream = connection.getOutputStream();
-        inputStream =connection.getInputStream();
-        try {
-            senderFilePath=inputStream.readUTF();
-
-            outputStream.writeUTF("clientIdFromConfig");
-            outputStream.flush();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
+        senderFilePath = connection.receiveString();
 
         File file = new File(senderFilePath);
-        try {
-            if (file.isDirectory()) {
-                outputStream.writeBoolean(true);
-                outputStream.flush();
-                sendDirectory(file);
-            } else {
-                outputStream.writeBoolean(false);
-                outputStream.flush();
-                sendFile(file);
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-
+        if (file.isDirectory()) {
+            connection.sendBoolean(true);
+            sendDirectory(file);
+        } else {
+            connection.sendBoolean(false);
+            sendFile(file);
         }
-        finally {
-            connection.close();
-        }
+        connection.close();
     }
 
-    private void sendFile(File file) throws IOException {
-
-        outputStream.writeUTF(file.getName());
-        outputStream.flush();
+    private void sendFile(File file) {
+        connection.sendString(file.getName());
         int fileSize = (int) file.length();
-        outputStream.writeInt(fileSize);
-        outputStream.flush();
-        FileInputStream fileInputStream = new FileInputStream(file);
-        byte[] buffer = new byte[1024];
-        int bytesRead;
-        while ((bytesRead = fileInputStream.read(buffer)) != -1) {
-            outputStream.write(buffer, 0, bytesRead);
-            outputStream.flush();
+        connection.sendInt(fileSize);
+        try (FileInputStream fileInputStream = new FileInputStream(file)) {
+            byte[] buffer = new byte[1024];
+            int bytesRead;
+            while ((bytesRead = fileInputStream.read(buffer)) != -1) {
+                connection.sendFileData(buffer, bytesRead);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("File " + file.getName() + " is not found.");
+        } catch (IOException e) {
+            System.out.println("Couldn't read file " + file.getName());
         }
 
-        fileInputStream.close();
     }
 
-    private void sendDirectory(File directory) throws IOException {
-        outputStream.writeUTF(directory.getName());
-        outputStream.flush();
+    private void sendDirectory(File directory) {
+        connection.sendString(directory.getName());
         File[] files = directory.listFiles();
         // Send the number of files in the directory
-        outputStream.writeInt(files != null ? files.length : 0);
-        outputStream.flush();
+        connection.sendInt(files != null ? files.length : 0);
         if (files != null) {
             // Send each file in the directory
             for (File file : files) {

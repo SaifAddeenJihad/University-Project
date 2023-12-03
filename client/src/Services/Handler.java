@@ -85,8 +85,14 @@ public class Handler {
         fileReceiver.start();
     }
     public static void sendFile() throws UnknownHostException {
-        InetAddress inetAddress=InetAddress.getByName("192.168.1.2");//from config
-        FileSender fileSender=new FileSender();
+        Properties appProps = new Properties();
+        String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
+        try {
+            appProps.load(new FileInputStream(rootPath + "Config.properties"));
+        } catch (IOException e) {
+            throw new RuntimeException("Config.properties file is missing!");
+        }
+        Thread fileSender = new Thread(new FileSender(appProps.getProperty("server-ip")));
         fileSender.start();
     }
 

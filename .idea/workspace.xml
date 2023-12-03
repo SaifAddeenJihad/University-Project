@@ -5,44 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caa04166-8936-41ec-9110-116298642af2" name="Changes" comment="hf handler">
-      <change afterPath="$PROJECT_DIR$/client/src/Config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/FileTransfer/FileReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/FileTransfer/FileReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/FileTransfer/FileSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/FileTransfer/FileSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/FileTransfer/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Services/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Services/Handler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/network/TCP.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/network/TCP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/network/TCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/network/TCPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/FileTransfer/FileReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/FileTransfer/FileReceiver.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/client/FileTransfer/FileSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/FileTransfer/FileSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/FileTransfer/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/FileTransfer/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/Main2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/Main2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/MiniServices/CommandRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/MiniServices/CommandRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/MiniServices/MiniServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/MiniServices/MiniServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/MiniServices/ProcessOutputReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/MiniServices/ProcessOutputReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/MiniServices/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/MiniServices/Screen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/RemoteControl/Server/Capture.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/RemoteControl/Server/Capture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/RemoteControl/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/RemoteControl/Server/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/RemoteControl/Server/ReceiveEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/RemoteControl/Server/ReceiveEvents.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/RemoteControl/Server/Sender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/RemoteControl/Server/Sender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/Services/CommandReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/Services/CommandReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/FileTransfer/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/client/Services/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/Services/Handler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/Stream/MulticastImageReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/Stream/MulticastImageReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/auxiliaryClasses/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/auxiliaryClasses/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/auxiliaryClasses/IPorts.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/auxiliaryClasses/IPorts.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/auxiliaryClasses/Lan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/auxiliaryClasses/Lan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/auxiliaryClasses/LanCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/auxiliaryClasses/LanCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/network/ConnectionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/ConnectionFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/network/IConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/IConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/network/IConnectionNames.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/IConnectionNames.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/network/MulticastReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/MulticastReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/network/MulticastSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/MulticastSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/network/TCP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/TCP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/network/TCPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/TCPClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/network/TCPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/TCPServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/network/UDP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/UDP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/network/UDPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/UDPClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/network/UDPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/network/UDPServer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,12 +45,13 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;file-services-fixes&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/babualrub/Desktop/server&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.12698412&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -136,7 +106,8 @@
       <workItem from="1700963095702" duration="628000" />
       <workItem from="1700965009114" duration="1445000" />
       <workItem from="1701115843678" duration="4240000" />
-      <workItem from="1701121048838" duration="12694000" />
+      <workItem from="1701121048838" duration="14643000" />
+      <workItem from="1701562198081" duration="2500000" />
     </task>
     <servers />
   </component>
