@@ -13,22 +13,21 @@ import auxiliaryClasses.IPorts;
 import network.ConnectionFactory;
 import network.IConnectionNames;
 import network.TCPClient;
-public class FileReceiver {
-    InetAddress serverIp;
+public class FileReceiver implements Runnable{
+    private final String serverIp;
+    private TCPClient connection;
     private String clientSavePath;
-    private DataInputStream inputStream;
-    public FileReceiver(InetAddress serverIp) {
+    public FileReceiver(String serverIp) {
         this.serverIp = serverIp;
     }
 
-    public void start() throws IOException, ClassNotFoundException, URISyntaxException {
-        TCPClient connection= (TCPClient) ConnectionFactory.getIConnection(IConnectionNames.TCP_CLIENT);
-        connection.initialize(IPorts.FILE_TRANSFER,"192.168.1.2");
-        System.out.println("sd");
-        //Socket socket = new Socket(serverIp, 7777);
-        inputStream = connection.getInputStream();
-        clientSavePath = inputStream.readUTF();
-        Boolean isDirectory = inputStream.readBoolean();
+    @Override
+    public void run() {
+        connection= (TCPClient) ConnectionFactory.getIConnection(IConnectionNames.TCP_CLIENT);
+        connection.initialize(IPorts.FILE_TRANSFER, serverIp);
+
+        clientSavePath = connection.receiveString();
+        boolean isDirectory = connection.receiveBoolean();
         if (isDirectory) {
             receiveDirectory();
         } else {
@@ -37,27 +36,32 @@ public class FileReceiver {
         connection.close();
     }
 
-    private void receiveFile() throws IOException {
-        String fileName = inputStream.readUTF();
+    private void receiveFile() {
+        String fileName = connection.receiveString();
 
         // Receive the file content
-        int fileSize = inputStream.readInt();
+        int fileSize = connection.receiveInt();
         long iterations = fileSize / 1024;
         byte[] fileContent = new byte[fileSize];
-        inputStream.readFully(fileContent);
+
+        connection.receiveFile(fileContent);
 
         // Save the file to the local filesystem
         Path filePath = Path.of(clientSavePath + "\\" + fileName);
-        Files.createDirectories(filePath.getParent());
-        Files.write(filePath, fileContent);
+        try {
+            Files.createDirectories(filePath.getParent());
+            Files.write(filePath, fileContent);
+        } catch (IOException e) {
+            System.out.println("Couldn't write file " + fileName + " to path " + filePath);
+        }
 
         System.out.println("File received: " + filePath.toString());
     }
 
-    private void receiveDirectory() throws IOException, URISyntaxException {
-        String directoryName = inputStream.readUTF();
-        int numberOfFiles = inputStream.readInt();
-        clientSavePath=clientSavePath+"\\"+directoryName;
+    private void receiveDirectory() {
+        String directoryName = connection.receiveString();
+        int numberOfFiles = connection.receiveInt();
+        clientSavePath = clientSavePath + "\\" + directoryName;
         for(int i=0;i<numberOfFiles;i++)
             receiveFile();
     }
