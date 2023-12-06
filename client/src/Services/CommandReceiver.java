@@ -25,7 +25,7 @@ public class CommandReceiver {
                 System.out.println(command);
                 execute(command);
             } catch (Exception e) {
-
+                e.printStackTrace();
             }
             finally {
                 connection.close();
@@ -35,10 +35,15 @@ public class CommandReceiver {
     private void execute(String command) throws Exception {
         switch (command){
             case "Stream":
-                Handler.startStream();
+                Handler.startStream(true);
                 break;
             case "Close Stream":
-                Handler.CloseStream();
+                Handler.closeStream();
+                break;
+            case "UDP Stream":
+                Handler.startStream(false);
+            case "Close UDP Stream":
+                Handler.closeStream();
                 break;
             case "Control":
                 Handler.startControl();

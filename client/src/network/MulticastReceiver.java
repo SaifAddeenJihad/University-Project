@@ -14,7 +14,7 @@ public class MulticastReceiver implements IConnection {
     public void initialize(int port, String ipAddress) {
         try {
             InetAddress multicastGroup = InetAddress.getByName(ipAddress);
-            MulticastSocket multicastSocket = new MulticastSocket(port);// Multicast IP address
+            multicastSocket = new MulticastSocket(port);// Multicast IP address
             multicastSocket.joinGroup(multicastGroup);
         } catch (Exception e) {
             e.printStackTrace();
@@ -42,12 +42,20 @@ public class MulticastReceiver implements IConnection {
 
     @Override
     public byte[] receive() {
-
+        try {
+            multicastSocket.setSoTimeout(3000);
+        } catch (SocketException e) {
+            throw new RuntimeException(e);
+        }
         byte[] receiveData = new byte[MAX_BUFFER_SIZE];
         byte[] fullBuffer = new byte[0];
         while (true) {
-            fullBuffer = new byte[MAX_BUFFER_SIZE];
             DatagramPacket datagramPacket = new DatagramPacket(receiveData, receiveData.length);
+            try {
+                multicastSocket.receive(datagramPacket);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             byte[] receivedData = datagramPacket.getData();
             int receivedLength = datagramPacket.getLength();
 
@@ -55,6 +63,7 @@ public class MulticastReceiver implements IConnection {
             byte[] newBuffer = new byte[fullBuffer.length + receivedLength];
             System.arraycopy(fullBuffer, 0, newBuffer, 0, fullBuffer.length);
             System.arraycopy(receivedData, 0, newBuffer, fullBuffer.length, receivedLength);
+            fullBuffer = newBuffer;
 
             if (receivedLength < MAX_BUFFER_SIZE) {
                 break;

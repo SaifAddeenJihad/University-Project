@@ -34,5 +34,14 @@ public class UDPServer extends UDP{
             throw new RuntimeException(e);
         }
     }
+    public void setTimeout(int period) {
+        if(period < 0)
+            return;
+        try {
+            socket.setSoTimeout(period);
+        } catch (SocketException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 }
