@@ -25,24 +25,19 @@ public class Handler {
     public static volatile Queue<byte[]> baos =new LinkedList<>();
 
     private Handler (){}
-    public static void startStream() throws Exception {
-        try {
-            MiniServices.disableKeyboard();
-            MulticastImageReceiver.setStreamIsRunning(true);
-            MulticastImageReceiver.initialize(50001,"239.0.0.1");
-            MulticastImageReceiver.start();
-        }
-        catch (Exception e){}
+    public static void startStream(boolean multicast) {
+        MulticastImageReceiver.setIsMulticast(multicast);
+        MulticastImageReceiver.setStreamIsRunning(true);
+        MulticastImageReceiver.initialize("239.0.0.1");
+        MulticastImageReceiver.start();
 
-        finally {
-
-            MiniServices.enableKeyboard();
-        }
+//        MiniServices.enableKeyboard();
     }
 
-    public static void CloseStream() throws Exception {
+    public static void closeStream() {
         MulticastImageReceiver.setStreamIsRunning(false);
-        MiniServices.enableKeyboard();
+        MulticastImageReceiver.close();
+//        MiniServices.enableKeyboard();
     }
     public static void startControl() throws Exception {
         MiniServices.disableKeyboard();
@@ -84,7 +79,7 @@ public class Handler {
         Thread fileReceiver = new Thread(new FileReceiver(appProps.getProperty("server-ip")));
         fileReceiver.start();
     }
-    public static void sendFile() throws UnknownHostException {
+    public static void sendFile() {
         Properties appProps = new Properties();
         String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
         try {
