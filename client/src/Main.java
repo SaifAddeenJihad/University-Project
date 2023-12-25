@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.Enumeration;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
 
         CommandReceiver commandReceiver=new CommandReceiver();

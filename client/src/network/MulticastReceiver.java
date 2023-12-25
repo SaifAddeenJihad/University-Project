@@ -42,11 +42,7 @@ public class MulticastReceiver implements IConnection {
 
     @Override
     public byte[] receive() {
-        try {
-            multicastSocket.setSoTimeout(3000);
-        } catch (SocketException e) {
-            throw new RuntimeException(e);
-        }
+
         byte[] receiveData = new byte[MAX_BUFFER_SIZE];
         byte[] fullBuffer = new byte[0];
         while (true) {
@@ -85,6 +81,15 @@ public class MulticastReceiver implements IConnection {
             multicastSocket.leaveGroup(new InetSocketAddress(group, port), networkInterface);
             multicastSocket.close();
         } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public void setTimeout(int period) {
+        if(period < 0)
+            return;
+        try {
+            multicastSocket.setSoTimeout(3000);
+        } catch (SocketException e) {
             throw new RuntimeException(e);
         }
     }

@@ -31,13 +31,13 @@ public class Handler {
         MulticastImageReceiver.initialize("239.0.0.1");
         MulticastImageReceiver.start();
 
-//        MiniServices.enableKeyboard();
+        MiniServices.disableKeyboard();
     }
 
     public static void closeStream() {
         MulticastImageReceiver.setStreamIsRunning(false);
         MulticastImageReceiver.close();
-//        MiniServices.enableKeyboard();
+        MiniServices.enableKeyboard();
     }
     public static void startControl() throws Exception {
         MiniServices.disableKeyboard();

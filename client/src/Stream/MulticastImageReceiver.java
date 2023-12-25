@@ -35,9 +35,11 @@ public class MulticastImageReceiver {
         if(isMulticast) {
             multicastReceiver = (MulticastReceiver) ConnectionFactory.getIConnection(IConnectionNames.MULTICAST_RECEIVER);
             multicastReceiver.initialize(IPorts.STREAM, ipAddress);
+            multicastReceiver.setTimeout(3000);
         } else {
             udpServer = (UDPServer) ConnectionFactory.getIConnection(IConnectionNames.UDP_SERVER);
             udpServer.initialize(IPorts.UDP_STREAM, null);
+            udpServer.setTimeout(3000);
         }
 
         if(frame == null)
@@ -88,7 +90,7 @@ public class MulticastImageReceiver {
         isMulticast = multicast;
     }
     private static byte[] receiveAll(UDPServer udpServer) {
-        udpServer.setTimeout(3000);
+
         byte[] fullBuffer = new byte[0];
         while (true) {
             DatagramPacket datagramPacket = udpServer.receivePacket();

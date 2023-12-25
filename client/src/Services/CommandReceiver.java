@@ -7,6 +7,7 @@ import network.ConnectionFactory;
 import network.IConnection;
 import network.IConnectionNames;
 import network.TCPServer;
+import MiniServices.BlockWebsites;
 
 public class CommandReceiver {
     private TCPServer connection;
@@ -24,7 +25,7 @@ public class CommandReceiver {
                 String command = connection.receiveString();
                 System.out.println(command);
                 execute(command);
-            } catch (Exception e) {
+            } catch (Exception e) { // TODO: Change this
                 e.printStackTrace();
             }
             finally {
@@ -33,7 +34,15 @@ public class CommandReceiver {
         }
     }
     private void execute(String command) throws Exception {
-        switch (command){
+        String commandName = command;
+        String commandParam = null;
+
+        if(command.contains("Website")){
+            commandName = command.substring(0, command.indexOf(':'));
+            commandParam = command.substring(command.indexOf(':') + 1);
+        }
+
+        switch (commandName){
             case "Stream":
                 Handler.startStream(true);
                 break;
@@ -70,11 +79,23 @@ public class CommandReceiver {
                 MiniServices.enableKeyboard();
                 MiniServices.enableMouse();
                 break;
-            case "Block Internet":
+            case "Allow Default":
+                BlockWebsites.allowDefault();
+                break;
+            case "Unblock All":
+                BlockWebsites.unblockAll();
+                break;
+            case "Allow Website":
+                BlockWebsites.allowCustom(commandParam);
+                break;
+            case "Block Website":
+                BlockWebsites.blockCustom(commandParam);
+                break;
+            case "Open Website":
+                MiniServices.openApp(commandParam);
                 break;
             default:
-                MiniServices.openApp(command);
-
+                System.out.println("Command not found");
         }
     }
 }
